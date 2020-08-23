@@ -30,7 +30,7 @@ public class Notification {
 
     @Builder.Default
     Date deliveryTime =
-            DateProvider.addSeconds(DateProvider.getCurrentDate(), 5);
+            DateProvider.addSeconds(DateProvider.getCurrentDate(), 3);
 
     @Builder.Default
     Boolean delivered = false;

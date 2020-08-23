@@ -18,7 +18,7 @@ public class NotificationScheduler {
     @Autowired
     NotificationDeliverer deliverer;
 
-    @Scheduled(fixedDelay = 3000)
+    @Scheduled(fixedDelay = 30000)
     public void findUndeliveredNotifications(){
         log.debug("Running scheduled search for undelivered notifications");
 
