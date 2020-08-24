@@ -12,7 +12,7 @@ public class WeatherService {
     private RestTemplate restTemplate = new RestTemplate();
 
     private static String weatherForecastURL = "http://api.weatherapi.com/v1/forecast.json";
-    private static String weatherApiToken = "74cc42a038664d7387c70547202308";
+    private static String weatherApiToken = "TOKEN-HERE";
 
     @SneakyThrows
     public WeatherResponse getWeather(String cityName, int forecastDays) {

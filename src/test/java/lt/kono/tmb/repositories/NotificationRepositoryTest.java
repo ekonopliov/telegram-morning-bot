@@ -72,7 +72,7 @@ class NotificationRepositoryTest {
 
         Assertions.assertFalse(retrievedNotifications.isEmpty());
         Assertions.assertEquals(1, retrievedNotifications.size());
-        Assertions.assertEquals(notification.getMessage(), retrievedNotifications.get(0).getMessage());
+        Assertions.assertEquals(notification.getId(), retrievedNotifications.get(0).getId());
 
 
     }
