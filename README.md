@@ -3,7 +3,7 @@ The bot can send you latest **news from BBC or give you a weather forecast** for
 
 
 <p style="text-align: center;">
-    <img src="./telegram-bot.gif" height="550" width="auto">
+    <img src="./telegram-bot.gif" height="640" width="auto">
 </p>
 
 
