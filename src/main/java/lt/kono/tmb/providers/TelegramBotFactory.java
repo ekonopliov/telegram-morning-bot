@@ -5,7 +5,7 @@ import com.pengrad.telegrambot.UpdatesListener;
 import com.pengrad.telegrambot.model.Update;
 import com.pengrad.telegrambot.model.request.ParseMode;
 import com.pengrad.telegrambot.request.SendMessage;
-import com.pengrad.telegrambot.request.SendPhoto;
+import lt.kono.tmb.entities.Notification;
 import lt.kono.tmb.entities.User;
 import lt.kono.tmb.news.Article;
 import lt.kono.tmb.news.NewsService;
@@ -13,7 +13,6 @@ import lt.kono.tmb.repositories.NotificationRepository;
 import lt.kono.tmb.repositories.UserRepository;
 import lt.kono.tmb.weather.WeatherResponse;
 import lt.kono.tmb.weather.WeatherService;
-import org.apache.http.client.utils.URIBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
@@ -27,7 +26,7 @@ import java.util.List;
 @PropertySource("classpath:application.yml")
 public class TelegramBotFactory {
 
-    private static String telegramBotToken = "906959267:AAFiOKZxO05omG1nGOHPiy3DswVlnF7voKc";
+    private static String telegramBotToken = "TOKEN-HERE";
 
     private static TelegramBot bot = new TelegramBot(telegramBotToken);
 
@@ -73,11 +72,12 @@ public class TelegramBotFactory {
                             break;
                         case "/news":
                             sendBBCNews(user);
-                            //Adding subscription
-//                            notificationRepository.save(Notification.builder()
-//                                    .message("Latest morning news")
-//                                    .chatId(user.getId())
-//                                    .build());
+                            /* Adding custom deliverable notification
+                            notificationRepository.save(Notification.builder()
+                                    .message("Latest morning news")
+                                    .chatId(user.getId())
+                                    .build());
+                             */
                             break;
                         case "/weather":
                             try {

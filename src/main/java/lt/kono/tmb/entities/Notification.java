@@ -1,5 +1,6 @@
 package lt.kono.tmb.entities;
 
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,6 +24,7 @@ public class Notification {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
+    @NotNull
     String message;
 
     @Builder.Default
@@ -30,10 +32,11 @@ public class Notification {
 
     @Builder.Default
     Date deliveryTime =
-            DateProvider.addSeconds(DateProvider.getCurrentDate(), 3);
+            DateProvider.addSeconds(DateProvider.getCurrentDate(), 10);
 
     @Builder.Default
     Boolean delivered = false;
 
+    @NotNull
     Long chatId;
 }

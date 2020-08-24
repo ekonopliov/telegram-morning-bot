@@ -8,7 +8,9 @@ import java.util.List;
 
 public interface NotificationRepository extends JpaRepository<Notification, Long> {
 
-    List<Notification> findByDeliveredFalse();
-
+    /**
+     * @param deliveryTime
+     * @return List of Notification that were not delivered, and deliveryTime has passed
+     */
     List<Notification> findByDeliveredFalseAndDeliveryTimeLessThan(Date deliveryTime);
 }

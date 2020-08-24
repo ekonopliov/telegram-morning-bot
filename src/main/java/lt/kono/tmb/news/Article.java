@@ -7,6 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 
+/**
+ * Generated from JSON schema
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "source",

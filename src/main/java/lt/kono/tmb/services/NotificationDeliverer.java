@@ -1,5 +1,6 @@
 package lt.kono.tmb.services;
 
+import com.pengrad.telegrambot.TelegramBot;
 import com.pengrad.telegrambot.request.SendMessage;
 import com.pengrad.telegrambot.response.SendResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -13,8 +14,8 @@ public class NotificationDeliverer {
 
     public Notification deliver(Notification notification){
 
-        SendResponse response = TelegramBotFactory.getInstance()
-                .execute(new SendMessage(notification.getChatId(),notification.getMessage()));
+        TelegramBot bot = TelegramBotFactory.getInstance();
+        SendResponse response =  bot.execute(new SendMessage(notification.getChatId(),notification.getMessage()));
 
         if(response.isOk()){
             notification.setDelivered(true);

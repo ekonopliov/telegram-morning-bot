@@ -43,4 +43,16 @@ public class DateProvider {
         calendar.add(Calendar.SECOND, seconds);
         return calendar.getTime();
     }
+
+    /**
+     * Returns given date with subtracted seconds
+     *
+     * @return Date
+     */
+    public static Date substractSeconds(Date date, int seconds){
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.SECOND, seconds * - 1);
+        return calendar.getTime();
+    }
 }
