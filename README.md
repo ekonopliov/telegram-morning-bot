@@ -1,7 +1,14 @@
 # Telegram Morning Routine Bot
 The bot can send you latest **news from BBC or give you a weather forecast** for the great upcoming day. Developed with Java 11, Spring Boot and [Telegram Bot API](https://github.com/pengrad/java-telegram-bot-api).  Fetching information from  [WeatherAPI](https://www.weatherapi.com) and [NewsAPI](https://newsapi.org).  
-  
-<img src="./telegram-bot.gif" height="300" width="auto">
+
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style> 
+
+<img src="./telegram-bot.gif" height="550" width="auto" class="aligncenter">
+
 
 # Build and run yourself
 **Note:** fill all \<TOKEN-HERE\> placeholders with tokens from @BotFather, [WeatherAPI](https://www.weatherapi.com) and [NewsAPI](https://newsapi.org).  
